@@ -12,13 +12,14 @@
     * Python 3.6.8
     * Spider version 5.2.2 
     * Documentation comparable à Doxygen
+    * Importer le module PPTK ’pip install pptk’ pour visualiser le module de points
     
  *******
  
  ####  Tâche 1:
  
-* Générer une sphère 
-* Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN)
+* Générer une sphère ✔️
+* Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN) ✔️
 * Pour chacun des points, faire une décomposition en valeur singulière (SVD)
 * Faire une matrice 3x3 en angle Eulérien
 * Prendre une des deux composantes du vecteur B (découlant de la matrice 3x3) et convertir en degrés (a × 180/π)
