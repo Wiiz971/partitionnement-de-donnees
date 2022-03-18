@@ -12,7 +12,7 @@
     * Python 3.6.8
     * Spider version 5.2.2 
     * Documentation comparable à Doxygen
-    * Importer le module PPTK ’pip install pptk’ pour visualiser le module de points
+    * Importer le module PPTK ’pip install pptk’ pour visualiser le nuage de points
     
  *******
  
