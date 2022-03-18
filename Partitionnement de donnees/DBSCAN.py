@@ -7,12 +7,20 @@ import pptk
 import numpy as np
 import math
 
-
+# La classe MathHelper est un algorithme de partitionnement de données DBSCAN. Réécriture d'un exercice effectué lors d'un Live Coding.
+# Utilisation de @staticmethod pour chacune des méthodes de cette classe
+# @author Vincent AZINCOURT
 class MathHelper:
     @staticmethod
     def isInSphere(X,Y,Z,R,Px,Py,Pz):
         return (X-Px)**2+(Y-Py)**2+(Z-Pz)**2<=R**2
-          
+    
+    # @param X coordonnees du centre de la sphere suivant l'axe x
+    # @param Y coordonnees du centre de la sphere suivant l'axe y
+    # @param Z coordonnees du centre de la sphere suivant l'axe z
+    # @param R rayon de la sphere
+    # @param N nombre de points
+    # @return une renvoie une matrice (Nx3) contenant les coordonnées des points générés
     @staticmethod
     def generateSphere(X,Y,Z,R,N):
         i=N
@@ -25,7 +33,9 @@ class MathHelper:
                 L.append([x1,y1,z1])
                 i-=1
         return L
-        
+    
+    # @param N nombre de points
+    # @return renvoie une matrice (Nx3) contenant les coordonnées des points générés    
     @staticmethod
     def generateSpheres(N):
         Spheres=[]
@@ -37,14 +47,20 @@ class MathHelper:
             Spheres.append(MathHelper.generateSphere(x,y,z,R,100))
         return Spheres
     
+    # @param N nombre de spheres
+    # @return renvoie une liste de spheres
     @staticmethod
     def generateScene(N):
         return np.row_stack(MathHelper.generateSpheres(N))
         
+    # @param P vecteur correspondant aux coordonnes du points P
+    # @param Q ecteur correspondant aux coordonnes du points Q
+    # @return renvoie la distance euclidienne entre deux points
     @staticmethod
     def euclideanDistance(P, Q):
           return math.sqrt((Q[0]-P[0])**2+(Q[1]-P[1])**2+(Q[2]-P[2])**2)
       
+    
     @staticmethod        
     def DBSCAN(D : np.ndarray, eps, MinPts):
         Id = 0
