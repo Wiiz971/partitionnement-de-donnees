@@ -11,6 +11,7 @@
 * Outils utilisés pour le projet :
     * Python 3.6.8
     * Spider version 5.2.2 
+    * Documentation comparable à Doxygen
     
  *******
  
