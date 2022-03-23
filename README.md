@@ -24,7 +24,7 @@
 * Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN) ✔️
 * Pour chacun des points, faire une décomposition en valeur singulière (SVD) ✔️
 * Faire une matrice 3x3 en angle Eulérien ✔️
-* Prendre une des deux composantes du vecteur B (découlant de la matrice 3x3) et convertir en degrés (a × 180/π) ✔️
+* Prendre une des trois composantes du vecteur B (de la matrice 3x3) et convertir en degrés (a × 180/π) ✔️
 * Incrémenter de 1 pour chaque angle trouvé pour en déduire une densité de probabilité ✔️
 
 ![image](https://user-images.githubusercontent.com/47423231/159677223-7af89ab6-2500-4275-b493-c98f895e737f.png)
