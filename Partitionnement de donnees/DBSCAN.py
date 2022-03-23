@@ -106,36 +106,7 @@ class MathHelper:
                 Dp.append(D[i])
                 idx.append(i)
         return Dp
-                
-                
-"""
-DBSCAN(D, eps, MinPts)
-   C = 0
-   pour chaque point P non visité des données D
-      marquer P comme visité
-      PtsVoisins = epsilonVoisinage(D, P, eps)
-      si tailleDe(PtsVoisins) < MinPts
-         marquer P comme BRUIT
-      sinon
-         C++
-         etendreCluster(D, P, PtsVoisins, C, eps, MinPts)
-          
-etendreCluster(D, P, PtsVoisins, C, eps, MinPts)
-   ajouter P au cluster C
-   pour chaque point P' de PtsVoisins 
-      si P' n'a pas été visité
-         marquer P' comme visité
-         PtsVoisins' = epsilonVoisinage(D, P', eps)
-         si tailleDe(PtsVoisins') >= MinPts
-            PtsVoisins = PtsVoisins U PtsVoisins'
-      si P' n'est membre d'aucun cluster
-         ajouter P' au cluster C
-          
-epsilonVoisinage(D, P, eps)
-   retourner tous les points de D qui sont à une distance inférieure à epsilon de P
-"""
-
-
+               
         
     
 if __name__ == "__main__":
