@@ -13,6 +13,8 @@
     * Spider version 5.2.2 
     * Documentation comparable à Doxygen
     * Importer le module PPTK ’pip install pptk’ pour visualiser le nuage de points
+    * Importer le module scipy ’pip install scipy' pour faire la décomposition en valeur singulière (SVD)
+    * Importer le module matplotlib ’pip install matplotlib' pour visualiser la courbe pour chaque angle trouvé
     
  *******
  
