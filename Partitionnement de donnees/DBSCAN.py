@@ -1,11 +1,15 @@
-
 ####################################################
 #              Importation de modules              #
 ####################################################
 import random
 import pptk
 import numpy as np
-import math
+import math as m
+from scipy.linalg import svd
+import sys
+import matplotlib.pyplot as plt
+
+
 
 # La classe MathHelper est un algorithme de partitionnement de données DBSCAN. Réécriture d'un exercice effectué lors d'un Live Coding.
 # Utilisation de @staticmethod pour chacune des méthodes de cette classe
@@ -58,7 +62,7 @@ class MathHelper:
     # @return renvoie la distance euclidienne entre deux points
     @staticmethod
     def euclideanDistance(P, Q):
-          return math.sqrt((Q[0]-P[0])**2+(Q[1]-P[1])**2+(Q[2]-P[2])**2)
+          return m.sqrt((Q[0]-P[0])**2+(Q[1]-P[1])**2+(Q[2]-P[2])**2)
       
     
     @staticmethod        
@@ -106,15 +110,47 @@ class MathHelper:
                 Dp.append(D[i])
                 idx.append(i)
         return Dp
-               
-        
-    
+     
+    # @param P vecteur correspondant a n angles eulériens
+    # @return renvoie un vecteur a n conposantes       
+    @staticmethod   
+    def convertirDegres(P):
+        return [i*180 /m.pi for i in P]
+            
 if __name__ == "__main__":
     
-    a = MathHelper.generateScene(3)
-
+    a = MathHelper.generateScene(1)
+    angles = [0 for i in range (360)]
+    for i in a:
+        # Singular-value decomposition
+        U, s, VT = svd([i])
+        
+        tol = sys.float_info.epsilon * 10
+        
+        if abs(VT.item(0,0))< tol and abs(VT.item(1,0)) < tol:
+           eul1 = 0
+           eul2 = m.atan2(-VT.item(2,0), VT.item(0,0))
+           eul3 = m.atan2(-VT.item(1,2), VT.item(1,1))
+        else:
+           eul1 = m.atan2(VT.item(1,0),VT.item(0,0))
+           sp = m.sin(eul1)
+           cp = m.cos(eul1)
+           eul2 = m.atan2(-VT.item(2,0),cp*VT.item(0,0)+sp*VT.item(1,0))
+           eul3 = m.atan2(sp*VT.item(0,2)-cp*VT.item(1,2),cp*VT.item(1,1)-sp*VT.item(0,1))
+        print("point aux coordonnées",i)
+        print("phi =", eul1)
+        print("theta  =", eul2)
+        print("psi =", eul3)
+        eul1Deg,eul2Deg,eul3Deg = MathHelper.convertirDegres([eul1,eul2,eul3])       
+        
+        #On ne prend que la composante suivant theta (2)
+        angles[int(eul2Deg+180)]+=1
+    
+    print(angles)
+    plt.plot(angles)
+    plt.show()
     idx = MathHelper.DBSCAN(a, 5, 4)
-    color_mat = np.zeros((300,3))
+    color_mat = np.zeros((100,3))
     for i in range(int(np.max(idx))):
         to_select = np.where(idx == i)
         color = pptk.rand(3) 
