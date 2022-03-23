@@ -1,0 +1,13 @@
+Singular-value decomposition : 
+  * https://www.dailymotion.com/video/xyjlud
+  * https://machinelearningmastery.com/singular-value-decomposition-for-machine-learning/
+  * https://en.wikipedia.org/wiki/D%C3%A9composition_en_valeurs_singuli%C3%A8res
+  
+Documentation Doxygen :
+  * https://en.wikipedia.org/wiki/Doxygen
+
+Angle d'Euler : 
+  * https://www.meccanismocomplesso.org/en/3d-rotations-and-euler-angles-in-python/
+  
+Triangulation de Delaunay :
+  * https://askcodez.com/de-retour-de-la-surface-du-triangle-de-la-3d-scipy-spatiales-delaunay.html
