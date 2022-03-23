@@ -32,7 +32,7 @@
 ![image](https://user-images.githubusercontent.com/47423231/159676851-0812a089-ce65-4766-a8ff-eff113ddbaf4.png)
 
 ![image](https://user-images.githubusercontent.com/47423231/159676478-49c213b6-d123-439d-8b91-f114f877eaf5.png)
-suivant l'angle θ
+_suivant l'angle θ_
 
  ####  Tâche 2:
 
