@@ -21,7 +21,7 @@
  ####  Tâche 1: [UPDATE]
  
 * Générer une sphère ✔️
-~~* Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN) ✔️
+~~* Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN) ✔️~~
 ~* Pour chacun des points, faire une décomposition en valeur singulière (SVD) ✔️
 ~* Faire une matrice 3x3 en angle Eulérien ✔️
 ~* Prendre une des trois composantes du vecteur B (de la matrice 3x3) et convertir en degrés (a × 180/π) ✔️
