@@ -28,19 +28,18 @@
 * ~~Prendre une des trois composantes du vecteur B (de la matrice 3x3) et convertir en degrés (a × 180/π) ✔️~~
 * ~~Incrémenter de 1 pour chaque angle trouvé pour en déduire une densité de probabilité ✔️~~
 
-* Pour chaque point du nuage de point, regarder ceux qui sont en dessous d'une certaine distance parmi tous les points de la sphère (distance euclidienne/DBSCAN)
-* Si c'est inférieur à un seuil, on les ajoute à un ensemble
-* Faire une SVD sur cet ensemble une fois que tous les points ont été traité
-* Prendre la matrice V (si c'est Nx3 l'ensemble) et transformer les coordonnées en angles euleriens
-* Prendre l'azimuth en radians (premiere coordonnée du vecteur) et * 180 / pi. 
-* Round le nombre au plus proche et incrémenter compteur[angle]++
+* Pour chaque point du nuage de point, regarder ceux qui sont en dessous d'une certaine distance parmi tous les points de la sphère (distance euclidienne/DBSCAN) ✔️
+* Si c'est inférieur à un seuil, on les ajoute à un ensemble ✔️
+* Faire une SVD sur cet ensemble une fois que tous les points ont été traité ✔️
+* Prendre la matrice V (si c'est Nx3 l'ensemble) et transformer les coordonnées en angles euleriens ✔️
+* Prendre l'azimuth en radians (premiere coordonnée du vecteur) et * 180 / pi. ✔️
+* Round le nombre au plus proche et incrémenter compteur[angle]++ ✔️
 
-![image](https://user-images.githubusercontent.com/47423231/159677223-7af89ab6-2500-4275-b493-c98f895e737f.png)
+![image](https://user-images.githubusercontent.com/47423231/161772090-272c64b7-da1d-447c-8082-999a690ac1a3.png)
 
-![image](https://user-images.githubusercontent.com/47423231/159676851-0812a089-ce65-4766-a8ff-eff113ddbaf4.png)
+![image](https://user-images.githubusercontent.com/47423231/161771749-e5010b76-380d-42f8-b5a6-bbcf356b1c0b.png)
 
-![image](https://user-images.githubusercontent.com/47423231/159676478-49c213b6-d123-439d-8b91-f114f877eaf5.png)
-_suivant l'angle θ_
+_suivant l'azimuth (angle θ)_
 
 
 
