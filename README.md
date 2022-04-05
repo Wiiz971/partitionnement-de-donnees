@@ -56,7 +56,7 @@ _suivant l'azimuth (angle θ)_
 
 * Réaliser une [triangulation de Delaunay](https://en.wikipedia.org/wiki/Delaunay_triangulation) sur l'ensemble des points ✔️
 * Une fois que les points sont utilisés, remplacer leur valeur par des zones négatives ( ≠ 1) ✔️
-* Compléter un algorithme permettant de faire plusieurs triangulations de Delaunay en parallèle (afin de réduire l'ordre de complexité de l'algorithme) ✔️
+* Compléter [un algorithme](https://tousu.in/qa/?qa=753100/) permettant de faire plusieurs triangulations de Delaunay en parallèle (afin de réduire l'ordre de complexité de l'algorithme) ✔️
 * Utiliser un timer entre deux triangulations puis entre chaque itération ✔️
 
 ![image](https://user-images.githubusercontent.com/47423231/161857354-8c178c05-de45-41b0-b4a8-3ed5c20c28dd.png)
