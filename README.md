@@ -35,9 +35,16 @@
 * Prendre l'azimuth en radians (premiere coordonnée du vecteur) et * 180 / pi. ✔️
 * Round le nombre au plus proche et incrémenter compteur[angle]++ ✔️
 
+_premier essai_
 ![image](https://user-images.githubusercontent.com/47423231/161772090-272c64b7-da1d-447c-8082-999a690ac1a3.png)
 
 ![image](https://user-images.githubusercontent.com/47423231/161771749-e5010b76-380d-42f8-b5a6-bbcf356b1c0b.png)
+
+_deuxième essai_
+
+![image](https://user-images.githubusercontent.com/47423231/161830666-c00d9f4b-d60f-4ecd-bbd4-8d1e44048148.png)
+
+![image](https://user-images.githubusercontent.com/47423231/161831140-680f8d72-39fc-4645-a358-98be8913a620.png)
 
 _suivant l'azimuth (angle θ)_
 
