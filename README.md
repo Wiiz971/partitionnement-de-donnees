@@ -18,7 +18,7 @@
     
  *******
  
- ####  Tâche 1: [UPDATE]
+ ####  [Tâche 1](https://github.com/Wiiz971/partitionnement-de-donnees/blob/main/Partitionnement%20de%20donnees/Tache1.py) : [UPDATE]
  
 * Générer une sphère ✔️
 
@@ -52,7 +52,7 @@ _suivant l'azimuth (angle θ)_
 
 
 
- ####  Tâche 2:
+ ####  [Tâche 2](https://github.com/Wiiz971/partitionnement-de-donnees/blob/main/Partitionnement%20de%20donnees/Tache2.py):
 
 * Réaliser une [triangulation de Delaunay](https://en.wikipedia.org/wiki/Delaunay_triangulation) sur l'ensemble des points ✔️
 * Une fois que les points sont utilisés, remplacer leur valeur par des zones négatives ( ≠ 1) ✔️
