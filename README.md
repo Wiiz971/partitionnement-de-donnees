@@ -21,11 +21,12 @@
  ####  Tâche 1: [UPDATE]
  
 * Générer une sphère ✔️
-~~* Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN) ✔️~~
-~* Pour chacun des points, faire une décomposition en valeur singulière (SVD) ✔️
-~* Faire une matrice 3x3 en angle Eulérien ✔️
-~* Prendre une des trois composantes du vecteur B (de la matrice 3x3) et convertir en degrés (a × 180/π) ✔️
-~* Incrémenter de 1 pour chaque angle trouvé pour en déduire une densité de probabilité ✔️~~
+
+* ~~Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN) ✔️~~
+* ~~Pour chacun des points, faire une décomposition en valeur singulière (SVD) ✔️~~
+* ~~Faire une matrice 3x3 en angle Eulérien ✔️~~
+* ~~Prendre une des trois composantes du vecteur B (de la matrice 3x3) et convertir en degrés (a × 180/π) ✔️~~
+* ~~Incrémenter de 1 pour chaque angle trouvé pour en déduire une densité de probabilité ✔️~~
 
 * Pour chaque point du nuage de point, regarder ceux qui sont en dessous d'une certaine distance parmi tous les points de la sphère (distance euclidienne/DBSCAN)
 * Si c'est inférieur à un seuil, on les ajoute à un ensemble
