@@ -34,6 +34,18 @@
 ![image](https://user-images.githubusercontent.com/47423231/159676478-49c213b6-d123-439d-8b91-f114f877eaf5.png)
 _suivant l'angle θ_
 
+
+[UPDATE]
+
+* Pour chaque point du nuage de point
+* Regarder ceux qui sont en dessous d'une certaine distance parmi tous les points de la sphère (distance euclidienne)
+* Si c'est inférieur à un seuil, on les ajoute à un ensemble
+* Faire une SVD sur cet ensemble une fois que tous les points ont été traité
+* Prendre la matrice V (si c'est Nx3 l'ensemble) et transformer les coordonnées en angles euleriens
+* Prendre l'azimuth en radians (premiere coordonnée du vecteur) et * 180 / pi. 
+* Round le nombre au plus proche et incrémenter compteur[angle]++
+
+
  ####  Tâche 2:
 
 * Réaliser une triangulation de Delaunay sur l'ensemble des points ✔️
