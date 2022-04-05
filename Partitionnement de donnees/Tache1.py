@@ -6,7 +6,6 @@ import pptk
 import numpy as np
 import math as m
 from scipy.linalg import svd
-import sys
 import matplotlib.pyplot as plt
 
 
@@ -64,11 +63,15 @@ class MathHelper:
     def euclideanDistance(P, Q):
           return m.sqrt((Q[0]-P[0])**2+(Q[1]-P[1])**2+(Q[2]-P[2])**2)
       
-    
+    # @param D matrice de points
+    # @param eps la distance pour que les MinPts soient considérés comme un cluster
+    # @param MinPts le nombre minimum de points
+    # @return renvoie une liste d'ensemble des points du cluster
     @staticmethod        
     def DBSCAN(D : np.ndarray, eps, MinPts):
         Id = 0
         Visited = np.zeros(len(D),dtype=int)
+        #on coplete la ListId qu'avec des -2
         ListId = np.ones(len(D), dtype=int) * -2
         D = np.column_stack([D, np.linspace(0,D.shape[0]-1, D.shape[0])])
         for j in range(len(D)):
@@ -116,43 +119,65 @@ class MathHelper:
     @staticmethod   
     def convertirDegres(P):
         return [i*180 /m.pi for i in P]
-            
+     
+    
+    # @param R Matrice de rotation
+    # @ return Vérifie si une matrice est une matrice de rotation valide.
+    @staticmethod
+    def isRotationMatrix(R) :
+        Rt = np.transpose(R)
+        shouldBeIdentity = np.dot(Rt, R)
+        I = np.identity(3, dtype = R.dtype)
+        n = np.linalg.norm(I - shouldBeIdentity)
+        return n < 1e-6
+    
+    
+    
+    # @param R Matrice de rotation
+    # @return Calcule la matrice de rotation aux angles d'Euler ( on a choisi X-Y-Z)
+    @staticmethod
+    def rotationMatrixToEulerAngles(R) :
+    
+        assert(MathHelper.isRotationMatrix(R))
+    
+        sy = m.sqrt(R[0,0] * R[0,0] +  R[1,0] * R[1,0])
+    
+        singular = sy < 1e-6
+    
+        if  not singular :
+            x = m.atan2(R[2,1] , R[2,2])
+            y = m.atan2(-R[2,0], sy)
+            z = m.atan2(R[1,0], R[0,0])
+        else :
+            x = m.atan2(-R[1,2], R[1,1])
+            y = m.atan2(-R[2,0], sy)
+            z = 0
+    
+        return np.array([x, y, z])
+
 if __name__ == "__main__":
     
-    a = MathHelper.generateScene(1)
-    angles = [0 for i in range (360)]
+    a = MathHelper.generateScene(1)   
+    idx = MathHelper.DBSCAN(a, 4, 2)
+    suppr = np.where(idx <1) #lorsqu'il n'y a pas de voisin 
+    a = np.delete(a,suppr[0],0) #On supprime
+    angles = [0]*360
+
     for i in a:
         # Singular-value decomposition
         U, s, VT = svd([i])
-        
-        tol = sys.float_info.epsilon * 10
-        
-        if abs(VT.item(0,0))< tol and abs(VT.item(1,0)) < tol:
-           eul1 = 0
-           eul2 = m.atan2(-VT.item(2,0), VT.item(0,0))
-           eul3 = m.atan2(-VT.item(1,2), VT.item(1,1))
-        else:
-           eul1 = m.atan2(VT.item(1,0),VT.item(0,0))
-           sp = m.sin(eul1)
-           cp = m.cos(eul1)
-           eul2 = m.atan2(-VT.item(2,0),cp*VT.item(0,0)+sp*VT.item(1,0))
-           eul3 = m.atan2(sp*VT.item(0,2)-cp*VT.item(1,2),cp*VT.item(1,1)-sp*VT.item(0,1))
-        print("point aux coordonnées",i)
-        print("phi =", eul1)
-        print("theta  =", eul2)
-        print("psi =", eul3)
-        eul1Deg,eul2Deg,eul3Deg = MathHelper.convertirDegres([eul1,eul2,eul3])       
-        
-        #On ne prend que la composante suivant theta (2)
-        angles[int(eul2Deg+180)]+=1
-    
+        #conversion en angle d'Euler(deg)
+        i = MathHelper.rotationMatrixToEulerAngles(VT)
+        i = MathHelper.convertirDegres(i)             
+        angles[int(i[0]+180)]+=1 #On ne prend que l'azimuth
+    angles = [i/100 for i in angles]
     print(angles)
     plt.plot(angles)
     plt.show()
-    idx = MathHelper.DBSCAN(a, 5, 4)
+    
     color_mat = np.zeros((100,3))
-    for i in range(int(np.max(idx))):
-        to_select = np.where(idx == i)
+    for i in range(int(np.max(a))):
+        to_select = np.where(a == i)
         color = pptk.rand(3) 
         color_mat[to_select,:] = color
        
