@@ -62,9 +62,11 @@ _suivant l'azimuth (angle θ)_
 * Compléter [un algorithme](https://tousu.in/qa/?qa=753100/) permettant de faire plusieurs triangulations de Delaunay en parallèle (afin de réduire l'ordre de complexité de l'algorithme) ✔️
 * Utiliser un timer entre deux triangulations puis entre chaque itération ✔️
 
-![image](https://user-images.githubusercontent.com/47423231/161857354-8c178c05-de45-41b0-b4a8-3ed5c20c28dd.png)
-![image](https://user-images.githubusercontent.com/47423231/161857381-59ba1519-8294-4fc0-b155-0ee7e0666fa3.png)
-![image](https://user-images.githubusercontent.com/47423231/161857421-a6a53ea1-f681-4bf3-a63f-5e3afd651631.png)
+![image](https://user-images.githubusercontent.com/47423231/161955815-89afb13a-322b-4224-bd7d-d01bed7a6824.png)
+![image](https://user-images.githubusercontent.com/47423231/161955787-498769b7-5b70-4773-ad24-597978e6c0c3.png)
+![image](https://user-images.githubusercontent.com/47423231/161956011-d537bd3e-cfcf-4994-9585-023eaf286470.png)
+
+![image](https://user-images.githubusercontent.com/47423231/161955904-df0269f3-3bf1-4bdc-8dd3-211420c37e2b.png)
 
 
 
