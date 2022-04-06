@@ -20,7 +20,7 @@
  
  ####  [Tâche 1](https://github.com/Wiiz971/partitionnement-de-donnees/blob/main/Partitionnement%20de%20donnees/Tache1.py) : [UPDATE]
  
-* Générer une sphère ✔️
+* Générer une sphère (de 1000 points) ✔️
 
 * ~~Générer des points (à une certaine distance) sur la surface de la sphère (DBSCAN)~~
 * ~~Pour chacun des points, faire une décomposition en valeur singulière (SVD)~~
@@ -36,15 +36,18 @@
 * Round le nombre au plus proche et incrémenter compteur[angle]++ ✔️
 
 _premier essai :_
-![image](https://user-images.githubusercontent.com/47423231/161772090-272c64b7-da1d-447c-8082-999a690ac1a3.png)
 
-![image](https://user-images.githubusercontent.com/47423231/161771749-e5010b76-380d-42f8-b5a6-bbcf356b1c0b.png)
+_repartition des angles_
+![image](https://user-images.githubusercontent.com/47423231/161948353-8d79017f-791b-43fa-8c42-92476a8d915a.png)
+
+![image](https://user-images.githubusercontent.com/47423231/161948220-9aeba6e2-0dee-476f-86f2-5bccee6a5382.png)
 
 _deuxième essai :_
 
-![image](https://user-images.githubusercontent.com/47423231/161831140-680f8d72-39fc-4645-a358-98be8913a620.png)
+_repartition des angles_
+![image](https://user-images.githubusercontent.com/47423231/161949080-c2748c1a-db8c-4e35-8602-166f4ebf0f26.png)
 
-![image](https://user-images.githubusercontent.com/47423231/161830666-c00d9f4b-d60f-4ecd-bbd4-8d1e44048148.png)
+![image](https://user-images.githubusercontent.com/47423231/161948952-ebf96fc0-5b8c-44fc-bb4d-5ae0019859c4.png)
 
 _suivant l'azimuth (angle θ)_
 
