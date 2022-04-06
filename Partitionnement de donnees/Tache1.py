@@ -29,32 +29,35 @@ class MathHelper:
         i=N
         L=[]
         while i>0:
-            x1 = random.random()*100
-            y1 = random.random()*100
-            z1 = random.random()*100
+            x1 = random.random()
+            y1 = random.random()
+            z1 = random.random()
             if MathHelper.isInSphere(X,Y,Z,R,x1,y1,z1):
                 L.append([x1,y1,z1])
                 i-=1
         return L
     
-    # @param N nombre de points
+    # @param N nombre de sphere
+    # @param NbrePts nombre de points
     # @return renvoie une matrice (Nx3) contenant les coordonnées des points générés    
     @staticmethod
-    def generateSpheres(N):
+    def generateSpheres(N,NbrePts):
         Spheres=[]
         for i in range(N):
-            x = random.random()*100
-            y = random.random()*100
-            z = random.random()*100
-            R = 5
-            Spheres.append(MathHelper.generateSphere(x,y,z,R,100))
+            x = random.random()
+            y = random.random()
+            z = random.random()
+            R = 10
+            Spheres.append(MathHelper.generateSphere(x,y,z,R,NbrePts))
         return Spheres
     
     # @param N nombre de spheres
+    # @param NbrePts nombre de points
     # @return renvoie une liste de spheres
     @staticmethod
-    def generateScene(N):
-        return np.row_stack(MathHelper.generateSpheres(N))
+    def generateScene(N,NbrePts):
+        return np.row_stack(MathHelper.generateSpheres(N,NbrePts))
+    
         
     # @param P vecteur correspondant aux coordonnes du points P
     # @param Q ecteur correspondant aux coordonnes du points Q
@@ -157,29 +160,34 @@ class MathHelper:
 
 if __name__ == "__main__":
     
-    a = MathHelper.generateScene(1)   
-    idx = MathHelper.DBSCAN(a, 4, 2)
+    Nbre_pts = 1000
+    aSphere = MathHelper.generateScene(1,Nbre_pts)   
+    idx = MathHelper.DBSCAN(aSphere, 4, 2)
     suppr = np.where(idx <1) #lorsqu'il n'y a pas de voisin 
-    a = np.delete(a,suppr[0],0) #On supprime
+    aSphere = np.delete(aSphere,suppr[0],0) #On supprime
     angles = [0]*360
-
-    for i in a:
+    
+    for i in aSphere:
+        collection = []
+        for j in aSphere:
+            if MathHelper.euclideanDistance(i, j)<=0.3:
+                collection.append(j)
         # Singular-value decomposition
-        U, s, VT = svd([i])
+        U, s, VT = svd(collection)
         #conversion en angle d'Euler(deg)
         i = MathHelper.rotationMatrixToEulerAngles(VT)
         i = MathHelper.convertirDegres(i)             
         angles[int(i[0]+180)]+=1 #On ne prend que l'azimuth
-    angles = [i/100 for i in angles]
+    angles = [i/Nbre_pts for i in angles]
     print(angles)
     plt.plot(angles)
     plt.show()
     
-    color_mat = np.zeros((100,3))
-    for i in range(int(np.max(a))):
-        to_select = np.where(a == i)
+    color_mat = np.zeros((Nbre_pts,3))
+    for i in range(int(np.max(aSphere))):
+        to_select = np.where(aSphere == i)
         color = pptk.rand(3) 
         color_mat[to_select,:] = color
        
-    v = pptk.viewer(a, color_mat)
+    v = pptk.viewer(aSphere, color_mat)
     v.set(point_size=1)
