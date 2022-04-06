@@ -66,7 +66,7 @@ _suivant l'azimuth (angle θ)_
 ![image](https://user-images.githubusercontent.com/47423231/161955787-498769b7-5b70-4773-ad24-597978e6c0c3.png)
 ![image](https://user-images.githubusercontent.com/47423231/161956011-d537bd3e-cfcf-4994-9585-023eaf286470.png)
 
-![image](https://user-images.githubusercontent.com/47423231/161955904-df0269f3-3bf1-4bdc-8dd3-211420c37e2b.png)
+![image](https://user-images.githubusercontent.com/47423231/161956109-069e1270-dbde-4c83-928e-bda6fa8d4290.png)
 
 
 
