@@ -9,8 +9,8 @@
     * [Nicolas YAZMAN](https://github.com/jsp)
 
 * Outils utilisés pour le projet :
-    * Python 3.7.9 (au delà le module pptk n'est pas utilisable)
-    * Spider version 5.2.2 
+    * [Python 3.7.9](https://www.python.org/downloads/release/python-379/) (au delà le module pptk n'est pas utilisable)
+    * [Spider version 5.2.2](https://www.spyder-ide.org/) 
     * Documentation comparable à [Doxygen](https://en.wikipedia.org/wiki/Doxygen)
     * Importer le module PPTK ’pip install pptk’ pour visualiser le nuage de points
     * Importer le module scipy ’pip install scipy' pour faire la décomposition en valeur singulière (SVD)
