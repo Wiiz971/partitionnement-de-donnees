@@ -9,13 +9,15 @@
     * [Nicolas YAZMAN](https://github.com/jsp)
 
 * Outils utilisés pour le projet :
-    * Python 3.6.8
+    * Python 3.7.9 (au delà le module pptk n'est pas utilisable)
     * Spider version 5.2.2 
     * Documentation comparable à [Doxygen](https://en.wikipedia.org/wiki/Doxygen)
     * Importer le module PPTK ’pip install pptk’ pour visualiser le nuage de points
     * Importer le module scipy ’pip install scipy' pour faire la décomposition en valeur singulière (SVD)
     * Importer le module matplotlib ’pip install matplotlib' pour visualiser la courbe pour chaque angle trouvé
-    
+    * Importer le module random ’pip install random' pour la géneration aléatoire des données (coordonnées des points, cluster...)
+    * Importer le module time´’pip install time' pour utiliser des compteurs temporels
+     
  *******
  
  ####  [Tâche 1](https://github.com/Wiiz971/partitionnement-de-donnees/blob/main/Partitionnement%20de%20donnees/Tache1.py) : [UPDATE]
