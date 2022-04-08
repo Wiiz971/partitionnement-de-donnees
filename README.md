@@ -39,14 +39,14 @@
 
 _Premier essai :_
 
-_repartition des angles :_
+_repartition des angles (de 0 à 360°):_
 ![image](https://user-images.githubusercontent.com/47423231/161948353-8d79017f-791b-43fa-8c42-92476a8d915a.png)
 
 ![image](https://user-images.githubusercontent.com/47423231/161948220-9aeba6e2-0dee-476f-86f2-5bccee6a5382.png)
 
 _Deuxième essai :_
 
-_repartition des angles :_
+_repartition des angles (de 0 à 360°) :_
 ![image](https://user-images.githubusercontent.com/47423231/161949080-c2748c1a-db8c-4e35-8602-166f4ebf0f26.png)
 
 ![image](https://user-images.githubusercontent.com/47423231/161948952-ebf96fc0-5b8c-44fc-bb4d-5ae0019859c4.png)
