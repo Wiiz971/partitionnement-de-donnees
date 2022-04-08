@@ -71,7 +71,7 @@ _suivant l'azimuth (angle θ)_
 _Et lorsque l'on compare les deux manieres d'appliquer une triangulation de Delaunay, on obtient ceci :_
 ![image](https://user-images.githubusercontent.com/47423231/161956109-069e1270-dbde-4c83-928e-bda6fa8d4290.png)
 
-Si l'on fait une serie de 10 tests et qu'on l'en deduit une _moyenne_ de l'optimisation du temps d'exécution, on obtient un facteur x129.8
+Si l'on fait une serie de 10 tests et qu'on en deduit une _moyenne_ de l'optimisation du temps d'exécution, on obtient un facteur x129.8
 
 
 
