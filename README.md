@@ -73,6 +73,11 @@ _Et lorsque l'on compare les deux manieres d'appliquer une triangulation de Dela
 
 Si l'on fait une serie de 10 tests et qu'on en deduit une _moyenne_ de l'optimisation du temps d'exécution, on obtient un facteur x129.8
 
-
-
+ ####  [Tâche 3](https://github.com/Wiiz971/partitionnement-de-donnees/blob/main/Partitionnement%20de%20donnees/Tache3.py):
+ 
+* Faire un grille d'occupation spatiale
+* Faire une triangulation de Delaunay de manière séquentielle sur chaque sous ensemble
+* Optionnel : Faire un point
+* Faire en parallèle le calcul des Delaunays successives
+* Comparer les résultats des deux méthodes : Delaunay parallèle et Delaunay sur l'ensemble des points.
 
