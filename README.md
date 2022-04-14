@@ -76,6 +76,10 @@ Si l'on fait une serie de 10 tests et qu'on en deduit une _moyenne_ de l'optimis
  ####  [Tâche 3](https://github.com/Wiiz971/partitionnement-de-donnees/blob/main/Partitionnement%20de%20donnees/Tache3.py):
  
 * Faire un grille d'occupation spatiale
+* 
+![image](https://user-images.githubusercontent.com/47423231/163413928-93dc99b2-b51f-4bd6-bb89-250d01b6d9f2.png)
+![image](https://user-images.githubusercontent.com/47423231/163413894-28a0a1f1-582e-433d-9db1-1ffce64878e0.png)
+
 * Faire une triangulation de Delaunay de manière séquentielle sur chaque sous ensemble
 * Optionnel : Faire un point
 * Faire en parallèle le calcul des Delaunays successives
