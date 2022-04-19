@@ -85,5 +85,6 @@ Si l'on fait une serie de 10 tests et qu'on en deduit une _moyenne_ de l'optimis
 * Faire en parallèle le calcul des Delaunays successives
 * Comparer les résultats des deux méthodes : Delaunay parallèle et Delaunay sur l'ensemble des points.
 
-__Etat de l'art__
+__Etat de l'art :__
+
 [Optimisation du traitement de nuage de points {en C}](https://dumas.ccsd.cnrs.fr/dumas-02093629/document)
