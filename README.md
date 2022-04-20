@@ -85,6 +85,17 @@ Si l'on fait une serie de 10 tests et qu'on en deduit une _moyenne_ de l'optimis
 * Faire en parallèle le calcul des Delaunays successives
 * Comparer les résultats des deux méthodes : Delaunay parallèle et Delaunay sur l'ensemble des points.
 
+_Méthode pour générer les sous ensemble (cubes) et répartir les points :_
+* Trouver le centre d'un cube 
+![image](https://user-images.githubusercontent.com/47423231/164226009-5ab0d485-86a1-4aa0-8227-27b7d85cb101.png)
+
+* Generer huits cubes autour de ce point :
+![image](https://user-images.githubusercontent.com/47423231/164226409-3dc69509-b0c2-4019-9a10-feaaff6e30ce.png)
+
+* Repeter l'action pour avoir le maillage necessaire 
+* Appliquer le script pour savoir dans lequel cube un point (du nuage) appartient
+* Faire une liste d'index avec les index de depart (nuage) et d'arrivée(sous-ensemble/cube)
+* 
 __Etat de l'art :__
 
 [Optimisation du traitement de nuage de points {en C}](https://dumas.ccsd.cnrs.fr/dumas-02093629/document)
